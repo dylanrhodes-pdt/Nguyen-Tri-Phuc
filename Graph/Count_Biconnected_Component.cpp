@@ -25,8 +25,11 @@ void dfs (int u,int pa) {
                 low[u] = min(low[u],low[v]);
                 if (low[v] >= num[u]) {
                     ans++;
-                    while (st.top() != pair <int,int> {u,v})
+                    pair <int,int> k;
+                    do {
+                        k = st.top();
                         st.pop();
+                    } while (k != pair <int,int> {u,v});
                 }
             }
         }
